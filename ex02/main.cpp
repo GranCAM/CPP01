@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carbon-m <carbon-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:29:38 by carbon-m          #+#    #+#             */
-/*   Updated: 2025/10/30 15:17:18 by carbon-m         ###   ########.fr       */
+/*   Created: 2025/10/30 18:12:19 by carbon-m          #+#    #+#             */
+/*   Updated: 2025/10/30 18:53:02 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#include <string>
 #include <iostream>
 
-class Zombie
+int	main(void)
 {
-	public:
-		Zombie(std::string name);
-		~Zombie(void);
-		void announce(void);
-	private:
-		std::string	name;
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
+
+	std::cout << "Adress of the string: " << &string << std::endl;
+	std::cout << "Adress of the pointer: " << stringPTR << std::endl;
 };
-
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
-
-#endif
